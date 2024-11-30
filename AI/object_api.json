@@ -1,0 +1,229 @@
+{
+  "14": {
+    "inputs": {
+      "save_path": "TripoSR_Test.obj",
+      "mesh": [
+        "25",
+        0
+      ]
+    },
+    "class_type": "[Comfy3D] Save 3D Mesh",
+    "_meta": {
+      "title": "Save 3D Mesh"
+    }
+  },
+  "15": {
+    "inputs": {
+      "mesh_file_path": [
+        "14",
+        0
+      ],
+      "preview3d": null
+    },
+    "class_type": "[Comfy3D] Preview 3DMesh",
+    "_meta": {
+      "title": "Preview 3DMesh"
+    }
+  },
+  "20": {
+    "inputs": {
+      "geometry_extract_resolution": 256,
+      "marching_cude_threshold": 25,
+      "tsr_model": [
+        "21",
+        0
+      ],
+      "reference_image": [
+        "34",
+        0
+      ],
+      "reference_mask": [
+        "47",
+        0
+      ]
+    },
+    "class_type": "[Comfy3D] TripoSR",
+    "_meta": {
+      "title": "TripoSR"
+    }
+  },
+  "21": {
+    "inputs": {
+      "model_name": "model.ckpt",
+      "chunk_size": 8192
+    },
+    "class_type": "[Comfy3D] Load TripoSR Model",
+    "_meta": {
+      "title": "Load TripoSR Model"
+    }
+  },
+  "25": {
+    "inputs": {
+      "axis_x_to": "+y",
+      "axis_y_to": "+z",
+      "axis_z_to": "+x",
+      "flip_normal": false,
+      "scale": 1,
+      "mesh": [
+        "55",
+        0
+      ]
+    },
+    "class_type": "[Comfy3D] Switch Mesh Axis",
+    "_meta": {
+      "title": "Switch Mesh Axis"
+    }
+  },
+  "26": {
+    "inputs": {
+      "width": 512,
+      "height": 512,
+      "batch_size": 1
+    },
+    "class_type": "EmptyLatentImage",
+    "_meta": {
+      "title": "Empty Latent Image"
+    }
+  },
+  "30": {
+    "inputs": {
+      "lora_name": "3dzujianV3-000010.safetensors",
+      "strength_model": 1,
+      "strength_clip": 1,
+      "model": [
+        "51",
+        0
+      ],
+      "clip": [
+        "51",
+        1
+      ]
+    },
+    "class_type": "LoraLoader",
+    "_meta": {
+      "title": "Load LoRA"
+    }
+  },
+  "31": {
+    "inputs": {
+      "text": "3D cartoon-style starbucks cup",
+      "clip": [
+        "30",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "33": {
+    "inputs": {
+      "seed": 21520549102441,
+      "steps": 20,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "denoise": 1,
+      "model": [
+        "53",
+        0
+      ],
+      "positive": [
+        "31",
+        0
+      ],
+      "negative": [
+        "42",
+        0
+      ],
+      "latent_image": [
+        "26",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
+  "34": {
+    "inputs": {
+      "samples": [
+        "33",
+        0
+      ],
+      "vae": [
+        "51",
+        2
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "42": {
+    "inputs": {
+      "text": "watermark",
+      "clip": [
+        "30",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "47": {
+    "inputs": {
+      "channel": "red",
+      "image": [
+        "34",
+        0
+      ]
+    },
+    "class_type": "ImageToMask",
+    "_meta": {
+      "title": "Convert Image to Mask"
+    }
+  },
+  "51": {
+    "inputs": {
+      "ckpt_name": "v1-5-pruned-emaonly.ckpt"
+    },
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "Load Checkpoint"
+    }
+  },
+  "53": {
+    "inputs": {
+      "config": "SD15, Attention Injection, attn_sharing",
+      "weight": 1,
+      "model": [
+        "30",
+        0
+      ]
+    },
+    "class_type": "LayeredDiffusionApply",
+    "_meta": {
+      "title": "Layer Diffuse Apply"
+    }
+  },
+  "55": {
+    "inputs": {
+      "texture_resolution": 1024,
+      "batch_size": 128,
+      "mesh": [
+        "20",
+        0
+      ]
+    },
+    "class_type": "[Comfy3D] Convert Vertex Color To Texture",
+    "_meta": {
+      "title": "Convert Vertex Color To Texture"
+    }
+  }
+}

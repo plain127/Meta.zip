@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "386030402719",
+    "project_id": "metazip-f466f",
+    "storage_bucket": "metazip-f466f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:386030402719:android:9c51d429e5ed20f19c36aa",
+        "android_client_info": {
+          "package_name": "com.meta.metazip"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAILrIh0L1h0lWlyHyJSTKc9lqHE-zuqT8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
