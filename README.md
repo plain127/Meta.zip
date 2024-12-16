@@ -1,6 +1,6 @@
 # Meta.zip
 # 프로젝트 소개
-![image](https://github.com/user-attachments/assets/4228285a-3206-4457-8ecd-d3fcee7be0cf)
+![image](https://github.com/user-attachments/assets/6ac5a283-4df7-4313-a6bb-f9ac00cff21b)
 ![image](https://github.com/user-attachments/assets/5b74f744-1bb9-45a4-bd73-ac3e01d97345)
 - 웹진 기사를 AI가 생성한 엔티티로 나만의 스크랩 북을 3D 공간에 만드는 플랫폼
 
@@ -70,7 +70,7 @@
 - Workflow
     - FLUX.1-dev
         
-        ![image](https://github.com/user-attachments/assets/11ad63b7-9634-4569-879b-6496ad0f27f0)
+        ![image](https://github.com/user-attachments/assets/420e590c-0ad8-409c-970b-d0e8ec1c0059)
         
     - SD1.5
       
