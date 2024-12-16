@@ -1,12 +1,7 @@
 # Meta.zip
 # 프로젝트 소개
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/df05732c-5796-4568-a555-a9a647dffd0a/cfc692b3-ceb8-4c5c-91f4-110fd7fb33b4/image.png)
-
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/df05732c-5796-4568-a555-a9a647dffd0a/13ec445b-b013-40eb-82be-2c1eeee85b8f/image.png)
-
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/df05732c-5796-4568-a555-a9a647dffd0a/de14649c-20b1-42f7-9f6c-f8638d2e715b/image.png)
-
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/df05732c-5796-4568-a555-a9a647dffd0a/0ea07014-ed6c-4c4b-8b11-3a132ddd8fd3/image.png)
+![image](https://github.com/user-attachments/assets/4228285a-3206-4457-8ecd-d3fcee7be0cf)
+![image](https://github.com/user-attachments/assets/5b74f744-1bb9-45a4-bd73-ac3e01d97345)
 - 웹진 기사를 AI가 생성한 엔티티로 나만의 스크랩 북을 3D 공간에 만드는 플랫폼
 
 # 목적
@@ -75,11 +70,11 @@
 - Workflow
     - FLUX.1-dev
         
-        ![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/df05732c-5796-4568-a555-a9a647dffd0a/e0fb1b1b-1b66-4295-bcec-4987ce1855c7/image.png)
+        ![image](https://github.com/user-attachments/assets/11ad63b7-9634-4569-879b-6496ad0f27f0)
         
     - SD1.5
-        
-        ![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/df05732c-5796-4568-a555-a9a647dffd0a/a93b008c-843d-43db-973e-f1e9098e4424/image.png)
+      
+        ![image](https://github.com/user-attachments/assets/366fe377-a36b-4674-85a5-e0af86ac9b64)
         
 - LoRA
     - magazine_cover2.safetensors
@@ -90,7 +85,7 @@
 - **Model : TripoSR**
 - Workflow
     
-    ![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/df05732c-5796-4568-a555-a9a647dffd0a/02d2f7a0-d195-4e91-909a-84cd32fbb63f/image.png)
+![image](https://github.com/user-attachments/assets/0b4ce297-8e0c-4d8c-a87e-baa44710a5af)
     
 
 # Symbolic AI
@@ -100,6 +95,12 @@
 # UI/UX 클라이언트
 
 - Tool : Unity
+  
+# Server
+
+- 멀티플레이 : Photon, Firebase
+- AI : Nginx, Docker, Uvicorn, FastAPI
+- 기사 스크랩 및 호출 : PostgreSQL, Qdrant
 
 # 내가 맡은 작업
 
