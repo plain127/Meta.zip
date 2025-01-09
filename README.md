@@ -65,6 +65,7 @@
 - **Model**
     - VAE
     - Unet
+    - CLIP
     - **FLUX.1-dev (기사 썸네일 생성)**
     - **SD1.5 (3D 오브젝트 생성을 위한)**
 - Workflow
